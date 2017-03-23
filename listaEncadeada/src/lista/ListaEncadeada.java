@@ -40,7 +40,6 @@ public class ListaEncadeada {
 	public Node getNode(int posicao){
 		
 		Node tempNode = this.primeiro;
-		
 		for(int i = 0; i <= posicao; i++){
 			tempNode = tempNode.getProximo();
 		}
@@ -66,13 +65,27 @@ public class ListaEncadeada {
 	
 	public void remove(int posicao){
 		
-	}
-	
-	public void removeInicio(){
+		Node ant = getNode(posicao -1);
+		Node prox = getNode(posicao +1);
+		ant.getProximo().setProximo(null);
+		ant.setProximo(prox);
+		countSize--;
 		
 	}
 	
+	public void removeInicio(Produto conteudo){
+		
+		Node no = new Node(conteudo,this.primeiro);
+		no = this.primeiro.getProximo();
+		no.setProximo(null);
+		countSize--;
+	}
+	
 	public void removeFinal(){
+		
+		ultimo = getNode(countSize-2);
+		ultimo.setProximo(null);
+		countSize--;
 		
 	}
 	
