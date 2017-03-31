@@ -6,7 +6,7 @@ public class Vertex {
 	private Vertex anterior;
 	private Vertex proximo;
 
-	public Vertex(Produto elemento, Vertex anterior, Vertex proximo) {
+	public Vertex(Vertex anterior,Produto elemento, Vertex proximo) {
 		super();
 		this.elemento = elemento;
 		this.anterior = anterior;
