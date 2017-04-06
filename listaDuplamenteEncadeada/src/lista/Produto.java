@@ -4,11 +4,10 @@ public class Produto {
 	
 	private String nome;
 	
-	public Produto(String nome) {
-		super();
-		this.nome = nome;
+	public Produto(){
+		
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}

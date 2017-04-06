@@ -7,18 +7,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Produto p1 = new Produto("Claudio");	
-		Produto p2 = new Produto("Luiza");	
+		Produto p =  new Produto();
+		p.setNome("1");
+		Produto p2 =  new Produto();
+		p2.setNome("2");
 		
-		ListaDupla l1 = new ListaDupla();
+		ListaDupla lista = new ListaDupla();
 		
-		l1.addInicioListaDE(p1);
-		l1.addInicioListaDE(p2);
+		lista.addInicioListaDE(p);;
+		System.out.println(lista.toString()); 
+		lista.addInicioListaDE(p2);;
 		
-		
-		System.out.println(p1);
-		System.out.println(p2);
-		
+		System.out.println(lista.toString()); 
+				
 	}
 
 }
