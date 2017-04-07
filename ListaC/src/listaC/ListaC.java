@@ -22,7 +22,7 @@ public class ListaC {
 			/*
 			 * Caso ele não seja vazio, o primeiro aponta para um novo nó. E o
 			 * primeiro recebe um novo nó. Para circular os dados o ultimo deve
-			 * receber o proximo referenciando a cabeça
+			 * receber o proximo referenciando a cabeça.Incrementa.
 			 */
 		} else {
 			this.head.setPrevious(newNode);
@@ -46,7 +46,7 @@ public class ListaC {
 			 * Instanciar a Classe Nó passando como parametro o ultimo, conteudo
 			 * e cabeça. o ultimo aponta para o próximo nó e o ultimo recebe um
 			 * novo nó. o novo nó q no método é o ultimo, aponta para a cabeça
-			 * para circular
+			 * para circular. Incrementa.
 			 */
 		} else {
 
@@ -54,25 +54,25 @@ public class ListaC {
 			this.tail.setNext(newNode);
 			this.tail = newNode;
 			newNode.setNext(head);
+			this.countSize++;
 
 		}
 
-		this.countSize++;
-
 	}
-	
+
 	// método para inserir a uma posição.
 	public void insertPosition(int position, int content) {
-		
-		//se a posição for vazia recebe a cabeça.
+
+		// se a posição for vazia recebe a cabeça.
 		if (position == 0) {
 			this.insertHead(content);
-			
-		//se a posição for igual ao contador insere ao final um conteúdo.	
+
+			// se a posição for igual ao contador insere ao final um conteúdo.
 		} else if (position == this.countSize) {
 			this.insertTail(content);
-		
-		
+			/*
+			 * 
+			 */
 		} else {
 
 			Node temp1 = this.getNode(position - 1);
@@ -81,7 +81,8 @@ public class ListaC {
 			Node newNode = new Node(temp1, content, temp2);
 			temp1.setNext(newNode);
 			temp2.setPrevious(newNode);
-
+			temp1.setNext(head);
+			temp2.setPrevious(tail);
 			this.countSize++;
 		}
 
@@ -98,9 +99,20 @@ public class ListaC {
 		return temp;
 	}
 
+	// remove da cabeça
 	public void removeHead() {
+
+		// Se o contador for 0 imprima que a lista está vazia.
 		if (this.countSize == 0) {
 			System.out.println("A lista está vazia");
+
+			/*
+			 * Nó temporário sem valor atribuido, recebe o primeiro. Primeiro
+			 * recebe temporario apontando para o proximo. Temporário aponta o
+			 * proximo como vazio e a cabeça aponta pro anterior removendo. Se o
+			 * contador for 0 ultimo recebe vazio.
+			 * 
+			 */
 		} else {
 			Node temp = this.head;
 			this.head = temp.getNext();
@@ -112,6 +124,10 @@ public class ListaC {
 
 			if (countSize == 0) {
 				this.tail = null;
+			
+			//Verificar uma forma de o tail apontar para o primeiro na questão da remoção.
+			} else {
+				
 			}
 		}
 	}
