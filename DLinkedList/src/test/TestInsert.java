@@ -1,12 +1,12 @@
-package teste;
+package test;
 
-import listaC.ListaC;
+import list.DLinkedList;
 
-public class Teste {
-	
+public class TestInsert {
+
 	public static void main(String[] args) {
-		
-		ListaC myList = new ListaC();
+
+		DLinkedList myList = new DLinkedList();
 		
 		myList.insertHead(15);
 		System.out.println(myList.toString());
@@ -34,7 +34,8 @@ public class Teste {
 		
 		myList.remove(1);
 		System.out.println(myList.toString());
+		
+		
 	}
-	
-	
+
 }
