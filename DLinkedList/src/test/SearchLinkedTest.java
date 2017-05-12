@@ -24,6 +24,8 @@ public class SearchLinkedTest {
 		list.bubbleSort();
 		
 		System.out.println(list.toString());
+	
+		
 	}
 
 }

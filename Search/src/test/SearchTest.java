@@ -3,8 +3,9 @@ package test;
 import java.util.Random;
 
 import search.BinarySearch;
-import search.BubbleSort;
 import search.LinearSearch;
+import search.RecursiveBinarySearch;
+import sort.BubbleSort;
 
 public class SearchTest {
 
@@ -29,13 +30,16 @@ public class SearchTest {
 		array = bubble.bubbleSort(array);
 		//		System.out.println(search.linearsearch(array, 12));
 		
-		System.out.println();
-		
+		System.out.println();	
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
 		}
 		//Utilizando Busca Binária para procurar o valor 12
 		BinarySearch search2 = new  BinarySearch();
-		System.out.println(search2.binarySearch(array, 12));
+//		System.out.println(search2.binarySearch(array, 12));
+		
+		System.out.println();
+		RecursiveBinarySearch rSearch = new RecursiveBinarySearch();
+		System.out.println(rSearch.recursiveBinarySearch(array, 12));
 	}
 }
