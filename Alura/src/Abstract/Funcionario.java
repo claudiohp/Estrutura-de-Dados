@@ -1,7 +1,7 @@
 package Abstract;
 
 public class Funcionario {
-
+//
 	private String nome;
 	protected double salario;
 	
