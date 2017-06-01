@@ -10,36 +10,58 @@ import sort.BubbleSort;
 public class SearchTest {
 
 	public static void main(String[] args) {
-		
-		LinearSearch search = new LinearSearch();
+
 
 		int[] array = new int[10];
+		
 		//Criado para popular o vetor com valores aleatórios
 		Random rand = new Random();
+		
 		//Populando o vetor
-		for (int i = 0; i < array.length; i++) {
+		for(int i = 0; i < array.length; i++){
 			array[i] = rand.nextInt(100);
 		}
-
-		for (int i = 0; i < array.length; i++) {
+		
+		//LinearSearch search = new LinearSearch();
+		
+		//Apenas print
+		for(int i = 0; i < array.length; i++){
 			System.out.print(array[i] + " ");
 		}
-		
-		//Ordenando o vetor com Bubble Sort
-		BubbleSort bubble = new BubbleSort();
-		array = bubble.bubbleSort(array);
-		//		System.out.println(search.linearsearch(array, 12));
-		
-		System.out.println();	
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
-		}
-		//Utilizando Busca Binária para procurar o valor 12
-		BinarySearch search2 = new  BinarySearch();
-//		System.out.println(search2.binarySearch(array, 12));
 		
 		System.out.println();
+		
+		//Ordenando o vetor com Bubble Sort
+		BubbleSort sort = new BubbleSort();
+		array = sort.bubbleSort(array);
+		
+		//System.out.println(search.linearSearch(array, 12));
+		
+		//Apenas print
+		for(int i = 0; i < array.length; i++){
+			System.out.print(array[i] + " ");
+		}
+		
+		System.out.println();
+		
+		//Utilizando Busca Binária para procurar o valor 12
+		
+		//BinarySearch search = new BinarySearch();
+		//System.out.println(search.binarySearch(array, 12));
 		RecursiveBinarySearch rSearch = new RecursiveBinarySearch();
 		System.out.println(rSearch.recursiveBinarySearch(array, 12));
+		
+		
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
