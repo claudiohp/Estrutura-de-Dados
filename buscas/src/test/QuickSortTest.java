@@ -14,7 +14,7 @@ public class QuickSortTest {
 		for (int i = 0; i < 50; i++) {
 			array[i] = rand.nextInt(500);
 		}
-
+//
 		for (int i = 0; i < 50; i++) {
 			System.out.print(array[i] + " ");
 		}
