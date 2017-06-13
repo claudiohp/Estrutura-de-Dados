@@ -2,7 +2,6 @@ package hanoi;
 
 public class RecursiveHanoiTower {
 	
-	//Recursividade Hanoi com pilha.
 	
 	private void move(int source, int destination){
 		System.out.println(source + "->" + destination );
