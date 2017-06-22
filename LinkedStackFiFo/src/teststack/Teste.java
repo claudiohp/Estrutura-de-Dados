@@ -17,12 +17,12 @@ public class Teste {
 		
 		System.out.println(queue.toString());
 		System.out.println("Peek: " + queue.peek());
-//		System.out.println();
-//		System.out.println("Dequeue " + queue.dequeue());
-//		System.out.println();
-//		System.out.println("Dequeue " + queue.dequeue());
-//		System.out.println("Peek: " + queue.peek());
-//		
+		System.out.println();
+		System.out.println("Dequeue " + queue.dequeue());
+		System.out.println();
+		System.out.println("Dequeue " + queue.dequeue());
+		System.out.println("Peek: " + queue.peek());
+		
 		
 	}
 

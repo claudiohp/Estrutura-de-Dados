@@ -22,7 +22,7 @@ public class StackTest {
 		for (int i = 0; i <= 5; i++) {
 			stack.push(rand.nextInt(10));
 		}
-		
+			
 		System.out.println("Peek: " + stack.peek());
 		System.out.println(stack.toString());
 		System.out.println("Pop: "+ stack.pop());
